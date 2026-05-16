@@ -1,0 +1,302 @@
+const coursesData = [
+  {
+    title: "React JS",
+    slug: "react-js",
+    keywords: ["react", "react js"],
+  },
+
+  {
+    title: "Node JS",
+    slug: "node-js",
+    keywords: ["node", "node js"],
+  },
+
+  {
+    title: "Python Django",
+    slug: "python-django",
+    keywords: ["python", "django"],
+  },
+
+  {
+    title: "Java Spring Boot",
+    slug: "java-spring-boot",
+    keywords: ["java", "spring boot"],
+  },
+
+  {
+    title: "PHP Laravel",
+    slug: "php-laravel",
+    keywords: ["php", "laravel"],
+  },
+
+  {
+    title: ".NET Development",
+    slug: "net-development",
+    keywords: ["dotnet", ".net"],
+  },
+  {
+    title: "Angular",
+    slug: "angular",
+    keywords: [
+      "angular",
+      "angular js",
+      "angular framework",
+      "frontend",
+      "typescript",
+    ],
+  },
+
+  {
+    title: "JavaScript",
+    slug: "javascript",
+    keywords: [
+      "javascript",
+      "js",
+      "ecmascript",
+      "frontend",
+      "web development",
+    ],
+  },
+
+  {
+    title: "Vue.js",
+    slug: "vue-js",
+    keywords: [
+      "vue",
+      "vue js",
+      "vuejs",
+      "frontend",
+      "javascript framework",
+    ],
+  },
+  {
+    title: "HTML",
+    slug: "html",
+    keywords: [
+      "html",
+      "html5",
+      "web page",
+      "frontend",
+      "markup language",
+      "website structure",
+    ],
+  },
+
+  {
+    title: "CSS",
+    slug: "css",
+    keywords: [
+      "css",
+      "css3",
+      "styling",
+      "frontend",
+      "responsive design",
+      "tailwind",
+      "animations",
+    ],
+  },
+  {
+    title: "React Native",
+    slug: "react-native",
+    keywords: [
+      "react native",
+      "rn",
+      "mobile app",
+      "mobile development",
+      "expo",
+      "native app",
+      "android app",
+      "ios app"
+    ],
+  },
+
+  {
+    title: "Flutter",
+    slug: "flutter",
+    keywords: [
+      "flutter",
+      "dart",
+      "flutter app",
+      "mobile app",
+      "cross platform",
+      "android app",
+      "ios app"
+    ],
+  },
+
+  {
+    title: "Android Development",
+    slug: "android-development",
+    keywords: [
+      "android",
+      "android development",
+      "android app",
+      "kotlin",
+      "android studio",
+      "native android"
+    ],
+  },
+  {
+    title: "iOS Development",
+    slug: "ios-development",
+    keywords: [
+      "ios",
+      "ios development",
+      "swift",
+      "swiftui",
+      "xcode",
+      "iphone app",
+      "apple app",
+      "ios app",
+      "mobile app"
+    ],
+  },
+
+  {
+    title: "Xamarin",
+    slug: "xamarin",
+    keywords: [
+      "xamarin",
+      "c#",
+      "dotnet mobile",
+      "cross platform app",
+      "xaml",
+      "mobile app",
+      "xamarin forms"
+    ],
+  },
+  {
+    title: "MongoDB",
+    slug: "mongodb",
+    keywords: [
+      "mongodb",
+      "mongo",
+      "nosql",
+      "mongoose",
+      "mongodb atlas",
+      "database",
+      "mongo database"
+    ],
+  },
+
+  {
+    title: "PostgreSQL",
+    slug: "postgresql",
+    keywords: [
+      "postgresql",
+      "postgres",
+      "psql",
+      "sql database",
+      "relational database",
+      "postgres db",
+      "database"
+    ],
+  },
+
+  {
+    title: "Oracle Database",
+    slug: "oracle",
+    keywords: [
+      "oracle",
+      "oracle database",
+      "plsql",
+      "pl/sql",
+      "oracle sql",
+      "enterprise database",
+      "database"
+    ],
+  },
+
+  {
+    title: "MySQL",
+    slug: "mysql",
+    keywords: [
+      "mysql",
+      "sql",
+      "mysql database",
+      "relational database",
+      "database",
+      "mysql server"
+    ],
+  },
+  {
+    title: "Ethical Hacking",
+    slug: "ethical-hacking",
+    keywords: [
+      "ethical hacking",
+      "hacking",
+      "cyber security",
+      "penetration testing",
+      "kali linux",
+      "bug bounty",
+      "ceh",
+      "web security"
+    ],
+  },
+
+  {
+    title: "Network Security",
+    slug: "network-security",
+    keywords: [
+      "network security",
+      "networking",
+      "firewall",
+      "vpn",
+      "cyber security",
+      "wireshark",
+      "ccna",
+      "network protection"
+    ],
+  },
+
+  {
+    title: "Cryptography",
+    slug: "cryptography",
+    keywords: [
+      "cryptography",
+      "encryption",
+      "decryption",
+      "aes",
+      "rsa",
+      "hashing",
+      "cyber security",
+      "ssl",
+      "tls"
+    ],
+  }, {
+    title: "Machine Learning",
+    slug: "machine-learning",
+    keywords: [
+      "machine learning",
+      "ml",
+      "ai ml",
+      "data science ml",
+      "supervised learning",
+      "unsupervised learning"
+    ]
+  }, {
+    title: "Deep Learning",
+    slug: "deep-learning",
+    keywords: [
+      "deep learning",
+      "dl",
+      "neural network",
+      "cnn",
+      "rnn",
+      "ai deep learning"
+    ]
+  }, {
+    title: "Neural Networks",
+    slug: "neural-networks",
+    keywords: [
+      "neural network",
+      "ann",
+      "perceptron",
+      "backpropagation",
+      "deep neural network",
+      "nn"
+    ]
+  }
+];
+
+module.exports = coursesData;
