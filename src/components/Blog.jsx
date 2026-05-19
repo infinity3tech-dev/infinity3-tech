@@ -1,6 +1,6 @@
 import React from "react";
 import { IoCalendarOutline } from "react-icons/io5";
-import star from "./../assets/images/star-icon.png";
+import star from "./../assets/images/star-icon.webp";
 import { useNavigate } from "react-router-dom";
 import blogs from "../data/blogs";
 

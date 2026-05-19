@@ -1,9 +1,9 @@
-import img1 from "../assets/images/cs1.jpg";
-import img2 from "../assets/images/cs2.jpg";
-import img3 from "../assets/images/cs3.jpg";
-import img4 from "../assets/images/cs4.jpg";
-import img5 from "../assets/images/cs5.jpg";
-import img6 from "../assets/images/cs6.jpg";
+import img1 from "../assets/images/cs1.webp";
+import img2 from "../assets/images/cs2.webp";
+import img3 from "../assets/images/cs3.webp";
+import img4 from "../assets/images/cs4.webp";
+import img5 from "../assets/images/cs5.webp";
+import img6 from "../assets/images/cs6.webp";
 
 export const caseStudies = [
   {

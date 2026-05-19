@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import jsPDF from "jspdf";
-import bg from "./../assets/images/course-details-bg.jpg";
+import bg from "./../assets/images/course-details-bg.webp";
 import CourseCard from "../components/CourseCard";
 import courses from "../data/coursesData";
 import {
@@ -301,6 +301,11 @@ const CourseDetailsPage = () => {
             <img
               src={bg}
               alt={course.title}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="1200"
+              height="500"
               className="w-full h-64 sm:h-72 md:h-80 object-cover"
             />
           </div>
@@ -308,10 +313,10 @@ const CourseDetailsPage = () => {
           {/* TABS */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-4 sm:p-6">
             {/* TAB BUTTONS */}
-            <div className="flex flex-wrap gap-6 border-b border-gray-200 dark:border-gray-700 pb-4">
+            <div className="flex flex-wrap gap-6 border-b border-gray-200 dark:border-gray-700 pb-4 ">
               <button
                 onClick={() => setActiveTab("curriculum")}
-                className={`font-medium transition ${
+                className={`font-medium transition cursor-pointer ${
                   activeTab === "curriculum"
                     ? "text-orange-500 border-b-2 border-orange-500 pb-2"
                     : "text-gray-600 dark:text-gray-300"
@@ -322,7 +327,7 @@ const CourseDetailsPage = () => {
 
               <button
                 onClick={() => setActiveTab("overview")}
-                className={`font-medium transition ${
+                className={`font-medium transition cursor-pointer ${
                   activeTab === "overview"
                     ? "text-orange-500 border-b-2 border-orange-500 pb-2"
                     : "text-gray-600 dark:text-gray-300"
@@ -344,7 +349,7 @@ const CourseDetailsPage = () => {
 
                     <button
                       onClick={() => setShowModal(true)}
-                      className="bg-orange-500 hover:bg-black transition text-white px-6 py-3 rounded-xl font-medium"
+                      className="bg-orange-500 hover:bg-black transition text-white px-6 py-3 rounded-xl font-medium cursor-pointer"
                     >
                       Download Curriculum
                     </button>
@@ -362,9 +367,9 @@ const CourseDetailsPage = () => {
                           onClick={() =>
                             setOpenIndex(openIndex === index ? null : index)
                           }
-                          className="w-full flex items-center justify-between px-5 py-4 bg-white dark:bg-gray-800"
+                          className="w-full flex items-center justify-between px-5 py-4 bg-white dark:bg-gray-800 "
                         >
-                          <span className="font-semibold text-left text-gray-800 dark:text-white">
+                          <span className="font-semibold text-left text-gray-800 dark:text-white cursor-pointer">
                             {item.title}
                           </span>
 
@@ -464,7 +469,7 @@ const CourseDetailsPage = () => {
                 <button
                   type="submit"
                   disabled={sidebarLoading}
-                  className="w-full bg-orange-500 hover:bg-black transition text-white py-3 rounded-xl font-semibold"
+                  className="w-full bg-orange-500 hover:bg-black transition text-white py-3 rounded-xl font-semibold cursor-pointer"
                 >
                   {sidebarLoading ? "Sending..." : "Send Inquiry"}
                 </button>
@@ -560,7 +565,7 @@ const CourseDetailsPage = () => {
                 <button
                   type="submit"
                   disabled={modalLoading}
-                  className="w-full bg-orange-500 hover:bg-black transition text-white py-3 rounded-xl font-semibold"
+                  className="w-full bg-orange-500 hover:bg-black transition text-white py-3 rounded-xl font-semibold cursor-pointer"
                 >
                   {modalLoading ? "Generating PDF..." : "Download Now"}
                 </button>

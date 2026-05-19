@@ -1,10 +1,10 @@
 import React from "react";
-import history2010 from "./../assets/images/history2010.jpg";
-import history2013 from "./../assets/images/history2013.jpg";
-import history2016 from "./../assets/images/history2016.jpg";
-import history2023 from "./../assets/images/history2023.jpg";
+import history2010 from "./../assets/images/history2010.webp";
+import history2013 from "./../assets/images/history2013.webp";
+import history2016 from "./../assets/images/history2016.webp";
+import history2023 from "./../assets/images/history2023.webp";
 
-import image from "./../assets/images/star-icon.png";
+import image from "./../assets/images/star-icon.webp";
 
 const timelineData = [
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import aboutUs from "./../assets/images/aboutUs.png";
+import aboutUs from "./../assets/images/aboutUs.webp";
 import AboutUs from "../components/AboutUs";
 import { MdOutlineDone } from "react-icons/md";
 import OurHistory from "../components/OurHistory";

@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 const ApplyFormModal = ({ plan, techTitle, courseId, onClose }) => {
   const [loading, setLoading] = useState(false);
   const BASE_URL = import.meta.env.VITE_BASE_URL;
+  console.log(plan, techTitle, courseId, onClose )
   const [formData, setFormData] = useState({
     fullName: "",
     mobile: "",
@@ -19,57 +20,54 @@ const ApplyFormModal = ({ plan, techTitle, courseId, onClose }) => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    setLoading(true);
-    const payload = {
-      FullName: formData.fullName,
-      ContactNo: formData.mobile,
-      Email: formData.email,
-      DepartmentID: Number(formData.department),
-      CourseID: Number(courseId),
-      CurrentCity: formData.city,
-      Technology: techTitle,
-      Duration: plan?.duration,
-      Source: "Website Internship Form",
-    };
+  const payload = {
+    FullName: formData.fullName,
+    ContactNo: formData.mobile,
+    Email: formData.email,
+    CourseID: Number(courseId),
+    CourseDurationID: Number(plan?.duration), 
+    DepartmentID: Number(formData.department),
+    CurrentCity: formData.city,
+  };
 
-    try {
-      const response = await fetch(`${BASE_URL}/students/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+  try {
+    const response = await fetch(`${BASE_URL}/students/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      toast.success(data?.message || "Application submitted successfully!");
+
+      setFormData({
+        fullName: "",
+        mobile: "",
+        email: "",
+        department: "",
+        city: "",
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        console.log("SUCCESS:", data);
-        console.log("payload", payload);
-        toast.success("Application submitted successfully!");
-        setFormData({
-          fullName: "",
-          mobile: "",
-          email: "",
-          department: "",
-          city: "",
-        });
-
-        onClose();
-      } else {
-        console.log("BACKEND ERROR:", data);
-        toast.error("Failed to submit application");
-      }
-    } catch (error) {
-      console.error("NETWORK ERROR:", error);
-      toast.error("Server not reachable");
-    } finally {
-      setLoading(false);
+      onClose();
+    } else {
+      console.log("BACKEND ERROR:", data);
+      toast.error(data?.message || "Failed to submit application");
     }
-  };
+  } catch (error) {
+    console.error("NETWORK ERROR:", error);
+    toast.error("Server not reachable");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div

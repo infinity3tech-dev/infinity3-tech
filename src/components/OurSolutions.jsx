@@ -2,7 +2,7 @@ import React from "react";
 import { IoRocketOutline } from "react-icons/io5";
 import { FaLaptopCode } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
-import image from "./../assets/images/star-icon.png";
+import image from "./../assets/images/star-icon.webp";
 import { useNavigate } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
 

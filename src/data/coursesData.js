@@ -1,13 +1,12 @@
-import blogperson1 from "./../assets/images/blogperson1.jpg";
-import blogperson2 from "./../assets/images/blogperson2.jpg";
-import blogperson3 from "./../assets/images/blogperson3.jpg";
-
-import course1 from "./../assets/images/Courses1.jpg";
-import course2 from "./../assets/images/Courses2.jpg";
-import course3 from "./../assets/images/Courses3.jpg";
-import course4 from "./../assets/images/Courses4.jpg";
-import course5 from "./../assets/images/Courses5.jpg";
-import course6 from "./../assets/images/Courses6.jpg";
+import blogperson1 from "./../assets/images/blogperson1.webp";
+import blogperson2 from "./../assets/images/blogperson2.webp";
+import blogperson3 from "./../assets/images/blogperson3.webp";
+import course1 from "./../assets/images/Courses1.webp";
+import course2 from "./../assets/images/Courses2.webp";
+import course3 from "./../assets/images/Courses3.webp";
+import course4 from "./../assets/images/Courses4.webp";
+import course5 from "./../assets/images/Courses5.webp";
+import course6 from "./../assets/images/Courses6.webp";
 
 const courses = [
   // ================= BACKEND =================

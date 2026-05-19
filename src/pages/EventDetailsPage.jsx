@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { events } from "../data/events";
-import bg from "./../assets/images/eventDetailsBg.jpg";
+import bg from "./../assets/images/eventDetailsBg.webp";
 import { FiClock } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";

@@ -1,10 +1,10 @@
 import React from "react";
-import aboutImg from "./../assets/images/aboutUs.png";
-import Star from "./../assets/images/star-icon.png";
-import icon1 from "./../assets/images/icon1.png";
-import icon2 from "./../assets/images/icon2.png";
-import icon3 from "./../assets/images/icon3.png";
-import icon4 from "./../assets/images/icon4.png";
+import aboutImg from "./../assets/images/aboutUs.webp";
+import Star from "./../assets/images/star-icon.webp";
+import icon1 from "./../assets/images/icon1.webp";
+import icon2 from "./../assets/images/icon2.webp";
+import icon3 from "./../assets/images/icon3.webp";
+import icon4 from "./../assets/images/icon4.webp";
 import { useNavigate } from "react-router-dom";
 
 const AboutUs = ({ showButton = true }) => {
@@ -26,6 +26,11 @@ const AboutUs = ({ showButton = true }) => {
             <img
               src={aboutImg}
               alt="About"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="600"
+              height="600"
               className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg object-cover rounded-2xl"
             />
           </div>
@@ -37,6 +42,8 @@ const AboutUs = ({ showButton = true }) => {
               <img
                 src={Star}
                 alt="Star Icon"
+                loading="lazy"
+                decoding="async"
                 className="w-4 sm:w-5 animate-[float_4s_ease-in-out_infinite]"
               />
 
@@ -69,6 +76,8 @@ const AboutUs = ({ showButton = true }) => {
                     <img
                       src={item.icon}
                       alt="icon"
+                      loading="lazy"
+                      decoding="async"
                       className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                     />
                   </div>
@@ -89,7 +98,13 @@ const AboutUs = ({ showButton = true }) => {
 
             {/* BOTTOM DESCRIPTION */}
             <p className="mt-6 text-sm sm:text-base leading-7 text-gray-500 dark:text-gray-300">
-             We leverage cutting-edge technologies to deliver innovative and customized solutions tailored to modern business needs. Our approach centers on building powerful strategies that enhance operational efficiency, elevate user experience, and address complex real-world challenges. By integrating advanced tools with creative thinking, we empower organizations to achieve sustainable growth and maintain a competitive edge.
+              We leverage cutting-edge technologies to deliver innovative and
+              customized solutions tailored to modern business needs. Our
+              approach centers on building powerful strategies that enhance
+              operational efficiency, elevate user experience, and address
+              complex real-world challenges. By integrating advanced tools with
+              creative thinking, we empower organizations to achieve sustainable
+              growth and maintain a competitive edge.
             </p>
 
             {/* BUTTON */}

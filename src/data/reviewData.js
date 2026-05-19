@@ -1,6 +1,6 @@
 
-import img1 from "./../assets/images/person1.jpg";
-import img2 from "./../assets/images/person2.jpg";
+import img1 from "./../assets/images/person1.webp";
+import img2 from "./../assets/images/person2.webp";
 
 
  const reviewData = [

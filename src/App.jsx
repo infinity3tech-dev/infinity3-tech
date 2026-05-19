@@ -50,7 +50,7 @@ function App() {
         <Route path="/blog" element={<BlogGrid />} />
         <Route path="/blog-details/:id" element={<BlogDetailsPage />} />
         <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
+        <Route path="/case-studies/:id" element={<CaseStudyDetails />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

@@ -1,176 +1,223 @@
-import React from "react";
-import PageHeader from "../components/PageHeader";
+import React, { useState } from "react";
 
 const PrivacyPolicy = () => {
+  const [activeTab, setActiveTab] = useState("privacy");
+
   return (
-    <div className="bg-gray-50 pt-16 sm:pt-20 md:pt-24 overflow-hidden dark:bg-gray-900 min-h-screen">
-      
-      {/* HEADER */}
-      <PageHeader title="Privacy Policy" />
+    <div className="bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 min-h-screen pt-16 sm:pt-20 md:pt-24">
+
+      {/* HERO */}
+      <div className="text-center py-10 px-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white">
+          Privacy Policy & Terms
+        </h1>
+
+        <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
+          Infinity3 Technology
+        </p>
+
+        {/* TOGGLE BUTTONS */}
+        <div className="flex justify-center gap-4 mt-6">
+
+          <button
+            onClick={() => setActiveTab("privacy")}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer ${
+              activeTab === "privacy"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 border border-orange-500 dark:text-orange-400 dark:border-orange-400"
+            }`}
+          >
+            Privacy Policy
+          </button>
+
+          <button
+            onClick={() => setActiveTab("terms")}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer ${
+              activeTab === "terms"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 border border-orange-500 dark:text-orange-400 dark:border-orange-400"
+            }`}
+          >
+            Terms & Conditions
+          </button>
+
+        </div>
+      </div>
 
       {/* CONTENT */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
-        
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 sm:p-7 md:p-10 space-y-10">
-          
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              Security and Storage
-            </h2>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
 
-            <p className="text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200 mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              eget euismod erat, sit amet vulputate enim.
-            </p>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm dark:shadow-lg p-6 sm:p-8 md:p-10 transition-all">
 
-            <ol className="list-decimal pl-5 sm:pl-6 space-y-3 text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              <li>
-                Credit Card: Visa, MasterCard, Discover, American Express,
-                JCB, Visa Electron. The total will be charged to your card
-                when the order is shipped.
-              </li>
+          {/* PRIVACY */}
+          {activeTab === "privacy" && (
+            <div>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
+                Privacy Policy
+              </h2>
 
-              <li>
-                Wilo features a Fast Checkout option, allowing you to securely
-                save your credit card details so that you don't have to
-                re-enter them for future purchases.
-              </li>
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
+                <strong>Effective Date:</strong> 23 March 2026
+              </p>
 
-              <li>
-                PayPal: Shop easily online without having to enter your credit
-                card details on the website. Your account will be charged once
-                the order is completed.
-              </li>
-            </ol>
-          </div>
+              <p className="mb-4 text-gray-600 dark:text-gray-300">
+                Infinity3technology values your privacy and is committed to protecting your personal information while you use our website and services.
+              </p>
 
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              Intellectual Property
-            </h2>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                1. Information We Collect
+              </h3>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-600 dark:text-gray-300">
+                <li>Name</li>
+                <li>Email Address</li>
+                <li>Phone Number</li>
+                <li>Website usage information</li>
+              </ul>
 
-            <p className="text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              eget euismod erat, sit amet vulputate enim. Etiam enim tellus,
-              maximus vel augue sed.
-            </p>
-          </div>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                2. How We Use Information
+              </h3>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-600 dark:text-gray-300">
+                <li>Provide and improve website services</li>
+                <li>Respond to inquiries</li>
+                <li>Improve security and performance</li>
+                <li>Send important updates</li>
+              </ul>
 
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              Linking to This Site
-            </h2>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                3. Cookies
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Our website may use cookies to improve user experience and analyze traffic.
+              </p>
 
-            <p className="text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              Items returned within 14 days of their original shipment date in
-              same as new condition will be eligible for a full refund or store
-              credit.
-            </p>
-          </div>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                4. Data Security
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                We implement security measures to protect your information.
+              </p>
 
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              Confidential Information
-            </h2>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                5. Third-Party Services
+              </h3>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-600 dark:text-gray-300">
+                <li>Google Analytics</li>
+                <li>Hosting and security services</li>
+              </ul>
 
-            <p className="text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200 mb-4">
-              Wilo accepts the following payment methods:
-            </p>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                6. Policy Updates
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                We may update this Privacy Policy anytime.
+              </p>
 
-            <ul className="list-disc pl-5 sm:pl-6 space-y-3 text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              <li>
-                Credit Card: Visa, MasterCard, Discover, American Express,
-                JCB, Visa Electron.
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                7. Official Verification
+              </h3>
+               <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Published at:{" "}
+                <a
+                  href="https://infinity3technology.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-500 hover:underline"
+                >
+                  https://infinity3technology.com/
+                </a>
+              </p>
 
-              <li>
-                Wilo features a Fast Checkout option, allowing you to securely
-                save your credit card details.
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                8. Contact
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Email: infinity3tech@gmail.com <br />
+                Address: Emerald Complex, 205, Chimanlal Girdharlal Rd, Mithakhali, Ahmedabad, Gujarat 380009
+              </p>
+            </div>
+          )}
 
-              <li>
-                PayPal: Shop easily online without having to enter your credit
-                card details on the website.
-              </li>
-            </ul>
-          </div>
+          {/* TERMS */}
+          {activeTab === "terms" && (
+            <div>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
+                Terms & Conditions
+              </h2>
 
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              General Permission to Use and Access
-            </h2>
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
+                <strong>Effective Date:</strong> 23 March 2026
+              </p>
 
-            <p className="text-sm sm:text-base leading-7 text-gray-700 dark:text-gray-200 font-medium mb-5">
-              This site is provided by Wilo. Wilo collects information in
-              several ways from different parts of this site.
-            </p>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                1. Acceptance of Terms
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                By accessing this website, you agree to these terms.
+              </p>
 
-            <ol className="list-decimal pl-5 sm:pl-6 space-y-3 text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              <li>
-                Complimentary ground shipping within 1 to 7 business days
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                2. Website Use
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                You agree to use this website lawfully and responsibly.
+              </p>
 
-              <li>
-                In-store collection available within 1 to 7 business days
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                3. Intellectual Property
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                All website content belongs to Infinite Soft Tech.
+              </p>
 
-              <li>
-                Next-day and Express delivery options also available
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                4. User Restrictions
+              </h3>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-600 dark:text-gray-300">
+                <li>No unlawful use</li>
+                <li>No hacking attempts</li>
+                <li>No copying without permission</li>
+              </ul>
 
-              <li>
-                Purchases are delivered in an orange box tied with a Bolduc
-                ribbon.
-              </li>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                5. Limitation of Liability
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Infinity3technology is not responsible for technical interruptions or damages resulting from website use.
+              </p>
 
-              <li>
-                See the delivery FAQs for details on shipping methods, costs
-                and delivery times.
-              </li>
-            </ol>
-          </div>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                6. Changes to Terms
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                We may modify these terms at any time.
+              </p>
 
-          {/* Section */}
-          <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
-              Overview
-            </h2>
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                7. Official Website
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Published at:{" "}
+                <a
+                  href="https://infinity3technology.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-500 hover:underline"
+                >
+                  https://infinity3technology.com/
+                </a>
+              </p>
 
-            <p className="text-sm sm:text-base leading-7 text-gray-600 dark:text-gray-200">
-              We may collect personal identification information from Users in
-              a variety of ways, including, but not limited to, when Users
-              visit our site, subscribe to the newsletter, fill out a form,
-              and in connection with other activities, services, features or
-              resources we make available on our Site.
+              <h3 className="font-semibold mt-6 text-gray-800 dark:text-white">
+                8. Contact
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                Email: infinity3tech@gmail.com <br />
+                Address: Emerald Complex, 205, Chimanlal Girdharlal Rd, Mithakhali, Ahmedabad, Gujarat 380009
+              </p>
+            </div>
+          )}
 
-              <br />
-              <br />
-
-              Users may be asked for, as appropriate, name, email address,
-              mailing address, phone number, company name. We will collect
-              personal identification information from Users only if they
-              voluntarily consent such information to us.
-
-              <br />
-              <br />
-
-              Users can always refuse to supply personally identification
-              information, except that it may prevent them from engaging in
-              certain Site related activities.
-
-              <br />
-              <br />
-
-              <span className="font-semibold text-black dark:text-white">
-                Last updated: January 25, 2025 at 24:00 pm
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     </div>

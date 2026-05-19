@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { LuPhoneCall, LuClock8 } from "react-icons/lu";
 import { SlLocationPin } from "react-icons/sl";
-import img from "./../assets/images/contact-us.png";
-import Star from "./../assets/images/star-icon.png";
+import img from "./../assets/images/contact-us.webp";
+import Star from "./../assets/images/star-icon.webp";
 import PageHeader from "../components/PageHeader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -64,8 +64,6 @@ const ContactUsPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20 sm:pt-24 md:pt-28 overflow-hidden dark:bg-gray-900">
-      {/* TOAST CONTAINER */}
-
       {/* HEADER */}
       <PageHeader title="Contact Us" />
 
@@ -140,7 +138,13 @@ const ContactUsPage = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-14 md:pb-20">
         <div className="text-center mb-10">
           <div className="flex justify-center items-center gap-2">
-            <img src={Star} className="w-4 sm:w-5" />
+            <img
+              src={Star}
+              alt="Star Icon"
+              loading="lazy"
+              decoding="async"
+              className="w-4 sm:w-5"
+            />
             <p className="text-orange-500 text-sm font-semibold uppercase">
               Get In Touch
             </p>
@@ -154,7 +158,13 @@ const ContactUsPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* IMAGE */}
           <div className="flex justify-center">
-            <img src={img} className="w-full max-w-md" />
+            <img
+              src={img}
+              alt="Contact Us"
+              loading="lazy"
+              decoding="async"
+              className="w-full max-w-md"
+            />
           </div>
 
           {/* FORM */}
@@ -215,7 +225,7 @@ const ContactUsPage = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-black transition"
+                className="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-black transition cursor-pointer"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
@@ -225,13 +235,15 @@ const ContactUsPage = () => {
       </div>
 
       {/* MAP */}
-      <div className="w-full">
+      <div className="w-full overflow-hidden rounded-2xl">
         <iframe
           title="Infinity3 Technology Location"
           src="https://www.google.com/maps?q=Infinity3%20Technology%20Ahmedabad&output=embed"
           className="w-full h-[250px] sm:h-[350px] md:h-[450px] border-0"
           loading="lazy"
-        ></iframe>
+          allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
       </div>
     </div>
   );

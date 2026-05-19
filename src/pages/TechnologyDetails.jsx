@@ -62,7 +62,7 @@ const TechnologyDetails = () => {
                 <button
                   className="tech-prev absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 
     bg-orange-500 text-white shadow-lg w-8 h-8 sm:w-10 sm:h-10 rounded-full 
-    flex justify-center items-center hover:bg-orange-600 transition z-10"
+    flex justify-center items-center hover:bg-orange-600 transition z-10 cursor-pointer"
                 >
                   <MdOutlineKeyboardArrowLeft size={20} />
                 </button>
@@ -71,7 +71,7 @@ const TechnologyDetails = () => {
                 <button
                   className="tech-next absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 
     bg-orange-500 text-white shadow-lg w-8 h-8 sm:w-10 sm:h-10 rounded-full 
-    flex justify-center items-center hover:bg-orange-600 transition z-10"
+    flex justify-center items-center hover:bg-orange-600 transition z-10 cursor-pointer"
                 >
                   <MdOutlineKeyboardArrowRight size={20} />
                 </button>

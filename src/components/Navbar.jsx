@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
-import logo from "./../assets/images/logo.png";
-import logoDark from "./../assets/images/logo_dark.png";
+import logo from "/logo.webp";
+import logoDark from "/logo_dark.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 import { MdSunny } from "react-icons/md";
@@ -83,15 +83,28 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="hover:text-orange-500 flex items-center">
           <div className="h-16 w-[120px] flex items-center justify-center">
+            {/* DARK LOGO */}
             <img
-              src={logoDark}
-              alt="LOGO"
-              className="w-26 h-auto hidden dark:block"
+              src="/logo_dark.webp"
+              alt="Infinity3 Technology Logo"
+              width="120"
+              height="64"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              className="w-28 h-auto hidden dark:block object-contain"
             />
+
+            {/* LIGHT LOGO */}
             <img
-              src={logo}
-              alt="LOGO"
-              className="max-h-full max-w-full block dark:hidden"
+              src="/logo.webp"
+              alt="Infinity3 Technology Logo"
+              width="120"
+              height="64"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              className="w-28 h-auto block dark:hidden object-contain"
             />
           </div>
         </Link>
@@ -163,18 +176,18 @@ const Navbar = () => {
             <div className="flex items-center gap-1 cursor-pointer hover:text-orange-500">
               About <FaChevronDown size={12} />
             </div>
-{openDropdown === "about" && (
-  <div
-    className="
+            {openDropdown === "about" && (
+              <div
+                className="
     absolute
     top-full
     left-0
     pt-3
     z-50
     "
-  >
-    <div
-      className="
+              >
+                <div
+                  className="
       w-max
       min-w-[180px]
       overflow-hidden
@@ -186,59 +199,56 @@ const Navbar = () => {
       dark:bg-gray-800
       shadow-2xl
       "
-    >
-      <span className="block h-1 bg-orange-500"></span>
+                >
+                  <span className="block h-1 bg-orange-500"></span>
 
-      <ul className="py-2 text-sm">
-                  <li>
-                    <Link
-                      to="/about"
-                      className="block px-4 py-2 hover:text-orange-500"
-                    >
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/team"
-                      className="block px-4 py-2 hover:text-orange-500"
-                    >
-                      Team
-                    </Link>
-                  </li>
+                  <ul className="py-2 text-sm">
+                    <li>
+                      <Link
+                        to="/about"
+                        className="block px-4 py-2 hover:text-orange-500"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/team"
+                        className="block px-4 py-2 hover:text-orange-500"
+                      >
+                        Team
+                      </Link>
+                    </li>
 
-                  <li>
-                    <Link
-                      to="/gallery"
-                      className="block px-4 py-2 hover:text-orange-500"
-                    >
-                      Gallery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/faq"
-                      className="block px-4 py-2 hover:text-orange-500"
-                    >
-                      FAQ
-                    </Link>
-                  </li>
+                    <li>
+                      <Link
+                        to="/gallery"
+                        className="block px-4 py-2 hover:text-orange-500"
+                      >
+                        Gallery
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/faq"
+                        className="block px-4 py-2 hover:text-orange-500"
+                      >
+                        FAQ
+                      </Link>
+                    </li>
 
-                  <li>
-                    <Link
-                      to="/contact-us"
-                      className="block px-4 py-2 hover:text-orange-500"
-                    >
-                      Contact Us
-                    </Link>
-                  </li>
-                </ul>
-    </div>
-  </div>
-)}
-
-
-           
+                    <li>
+                      <Link
+                        to="/contact-us"
+                        className="block px-4 py-2 hover:text-orange-500"
+                      >
+                        Contact Us
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </li>
         </ul>
 
@@ -303,7 +313,25 @@ const Navbar = () => {
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-6 border-b border-white/20 pb-3">
-            <img src={logo} alt="logo" className="h-8" />
+            <div className="h-10 w-[110px] flex items-center">
+              <img
+                src={logoDark}
+                alt="logo"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="h-auto w-full hidden dark:block object-contain"
+              />
+
+              <img
+                src={logo}
+                alt="logo"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="h-auto w-full block dark:hidden object-contain"
+              />
+            </div>
             <button
               onClick={() => {
                 toggleTheme();

@@ -1,8 +1,8 @@
 import React from "react";
 import { FaWhatsapp, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import logo from "./../assets/images/logo.png";
-import logoDark from "./../assets/images/logo_dark.png";
+import logo from "./../assets/images/logo.webp";
+import logoDark from "./../assets/images/logo_dark.webp";
 import { LuPhoneCall } from "react-icons/lu";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -10,7 +10,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: MdEmail, url: "mailto:infinity3tech@gmail.com" },
+    {
+      icon: MdEmail,
+      url: "https://mail.google.com/mail/?view=cm&fs=1&to=infinity3tech@gmail.com",
+    },
     { icon: FaWhatsapp, url: "https://wa.me/919409259294" },
     {
       icon: FaLinkedinIn,
@@ -29,15 +32,22 @@ const Footer = () => {
         <div>
           <Link to="/" className="hover:text-orange-500 flex items-center">
             <div className="h-16 w-[120px] flex items-center justify-center">
+              {/* DARK LOGO */}
               <img
                 src={logoDark}
-                alt="LOGO"
-                className="w-26 h-auto  hidden dark:block"
+                alt="Infinity3 Technology Logo"
+                loading="lazy"
+                decoding="async"
+                className="hidden dark:block w-full h-auto object-contain"
               />
+
+              {/* LIGHT LOGO */}
               <img
                 src={logo}
-                alt="LOGO"
-                className="max-h-full max-w-full block dark:hidden"
+                alt="Infinity3 Technology Logo"
+                loading="lazy"
+                decoding="async"
+                className="block dark:hidden w-full h-auto object-contain"
               />
             </div>
           </Link>
@@ -115,7 +125,7 @@ const Footer = () => {
             ].map((item, i) => (
               <li
                 key={i}
-                className="hover:text-orange-500 hover:pl-1 transition-all duration-200 cursor-pointer"
+                className="hover:text-orange-500 hover:pl-1 transition-all duration-200"
               >
                 {item}
               </li>
@@ -132,15 +142,22 @@ const Footer = () => {
 
           <div className="space-y-4 text-sm">
             <div className="flex items-center gap-3 hover:text-orange-500 hover:pl-1 transition-all duration-200 cursor-pointer">
-              <SlLocationPin
-                className="text-orange-500 min-w-[20px]"
-                size={16}
-              />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Infinity3+Technology+205+Emerald+Complex+CG+Road+Near+Mithakhali+Navrangpura+Ahmedabad+Gujarat+380009"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-orange-500 hover:pl-1 transition-all duration-200 cursor-pointer"
+              >
+                <SlLocationPin
+                  className="text-orange-500 min-w-[20px]"
+                  size={16}
+                />
 
-              <p>
-                205, Emerald Complex, CG Road, Near Mithakhali, Navrangpura,
-                Ahmedabad Gujarat 380009
-              </p>
+                <p>
+                  205, Emerald Complex, CG Road, Near Mithakhali, Navrangpura,
+                  Ahmedabad Gujarat 380009
+                </p>
+              </a>
             </div>
 
             <div className="flex items-center gap-3 hover:text-orange-500 hover:pl-1 transition-all duration-200 cursor-pointer">
@@ -152,11 +169,12 @@ const Footer = () => {
 
             <div className="flex items-center gap-3 hover:text-orange-500 hover:pl-1 cursor-pointer transition-all duration-200">
               <a
-                href="mailto:infinity3tech@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=infinity3tech@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-orange-500 transition"
               >
                 <MdOutlineMailOutline className="text-orange-500" size={16} />
-
                 <p>infinity3tech@gmail.com</p>
               </a>
             </div>
@@ -166,20 +184,28 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-200 dark:border-gray-700 mt-16 py-6">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+        <div className="max-w-7xl mx-auto px-10 flex flex-col gap-4 md:flex-row justify-center items-center text-sm text-gray-500 dark:text-gray-400">
           <p className="text-center md:text-left">
             © {new Date().getFullYear()} Infinity3 technology. All Rights
             Reserved.
           </p>
 
           <div className="flex gap-4 mt-3 md:mt-0">
-            <p className="hover:text-orange-500 cursor-pointer transition">
-              <Link to="/privacy-policy">Privacy Policy</Link>
-            </p>
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-3 md:mt-0">
+              <Link
+                to="/privacy-policy"
+                className="hover:text-orange-500 transition"
+              >
+                Privacy Policy
+              </Link>
 
-            <p className="hover:text-orange-500 cursor-pointer transition">
-              <Link to="/terms-conditions">Terms & Conditions</Link>
-            </p>
+              <Link
+                to="/terms-conditions"
+                className="hover:text-orange-500 transition"
+              >
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </div>

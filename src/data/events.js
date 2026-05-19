@@ -1,12 +1,12 @@
-import img1 from "../assets/images/event1.jpg";
-import img2 from "../assets/images/event2.jpg";
-import img3 from "../assets/images/event3.jpg";
-import img4 from "../assets/images/event4.jpg";
-import img5 from "../assets/images/event5.jpg";
-import img6 from "../assets/images/event6.jpg";
-import img7 from "../assets/images/event7.jpg";
-import img8 from "../assets/images/event8.jpg";
-import img9 from "../assets/images/event9.jpg";
+import img1 from "../assets/images/event1.webp";
+import img2 from "../assets/images/event2.webp";
+import img3 from "../assets/images/event3.webp";
+import img4 from "../assets/images/event4.webp";
+import img5 from "../assets/images/event5.webp";
+import img6 from "../assets/images/event6.webp";
+import img7 from "../assets/images/event7.webp";
+import img8 from "../assets/images/event8.webp";
+import img9 from "../assets/images/event9.webp";
 
 export const events = [
   {

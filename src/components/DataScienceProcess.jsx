@@ -1,18 +1,18 @@
 import React from "react";
-import step1 from "./../assets/images/step1.png";
-import step2 from "./../assets/images/step2.png";
-import step3 from "./../assets/images/step3.png";
-import step4 from "./../assets/images/step4.png";
-import step5 from "./../assets/images/step5.png";
-import step6 from "./../assets/images/step6.png";
-import Star from "./../assets/images/star-icon.png";
+import step1 from "./../assets/images/step1.webp";
+import step2 from "./../assets/images/step2.webp";
+import step3 from "./../assets/images/step3.webp";
+import step4 from "./../assets/images/step4.webp";
+import step5 from "./../assets/images/step5.webp";
+import step6 from "./../assets/images/step6.webp";
+import Star from "./../assets/images/star-icon.webp";
 import {
-  FaLightbulb, 
+  FaLightbulb,
   FaShieldAlt,
   FaUsers,
   FaBullseye,
-  FaAward, 
-  FaSyncAlt, 
+  FaAward,
+  FaSyncAlt,
 } from "react-icons/fa";
 
 const steps = [
@@ -56,7 +56,7 @@ const steps = [
 
 export default function DataScienceProcess() {
   return (
-    <div className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4 transition-colors duration-300">
+    <div className="w-full bg-gray-50 dark:bg-gray-900 py-10 md:py-16 px-4 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -64,6 +64,10 @@ export default function DataScienceProcess() {
             <img
               src={Star}
               alt="Star Icon"
+              loading="lazy"
+              decoding="async"
+              width="20"
+              height="20"
               className="w-5 animate-[float_4s_ease-in-out_infinite]"
             />
 

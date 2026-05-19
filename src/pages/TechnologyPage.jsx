@@ -67,7 +67,7 @@ const TechnologyPage = () => {
                 {/* BUTTON */}
                 <button
                   onClick={() => navigate(`/technology/${slug}`)}
-                 className="mt-auto bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2.5 px-4 rounded-xl hover:from-black hover:to-gray-900 dark:hover:from-orange-600 dark:hover:to-orange-500 transition shadow-md hover:shadow-lg text-sm sm:text-base"
+                 className="mt-auto bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2.5 px-4 rounded-xl hover:from-black hover:to-gray-900 dark:hover:from-orange-600 dark:hover:to-orange-500 transition shadow-md hover:shadow-lg text-sm sm:text-base cursor-pointer"
                 >
                   Explore
                 </button>

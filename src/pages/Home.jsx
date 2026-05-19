@@ -19,20 +19,24 @@ import {
 } from "react-icons/md";
 import internshipData from "../data/internshipData";
 import InternshipCard from "../components/InternshipCard";
-import Star from "./../assets/images/star-icon.png";
+import Star from "./../assets/images/star-icon.webp";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <AboutUs />
-      <section className="bg-gray-100 dark:bg-gray-900 py-10 md:py-20">
+      <section className="bg-gray-100 dark:bg-gray-900 py-10 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           {/* Heading */}
           <div className="flex items-center justify-center gap-2">
             <img
               src={Star}
               alt="Star Icon"
+              loading="lazy"
+              decoding="async"
+              width="20"
+              height="20"
               className="w-4 md:w-5 animate-[float_4s_ease-in-out_infinite]"
             />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-white text-center">
@@ -49,8 +53,7 @@ const Home = () => {
               className="prev-btn absolute left-1 md:left-2 lg:left-5 top-1/2 -translate-y-1/2 
         w-9 h-9 md:w-12 md:h-12 rounded-full flex justify-center items-center 
         bg-orange-500 text-white shadow-lg transition z-10
-        hover:bg-gray-200 hover:text-orange-500
-        dark:bg-gray-800 dark:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+        dark:bg-orange-500 dark:text-white dark:hover:bg-orange-500 dark:hover:text-white cursor-pointer"
             >
               <MdOutlineKeyboardArrowLeft size={20} className="md:text-2xl" />
             </button>
@@ -58,8 +61,7 @@ const Home = () => {
               className="next-btn absolute right-1 md:right-2 lg:right-5 top-1/2 -translate-y-1/2 
         w-9 h-9 md:w-12 md:h-12 rounded-full flex justify-center items-center 
         bg-orange-500 text-white shadow-lg transition z-10
-        hover:bg-gray-200 hover:text-orange-500
-        dark:bg-gray-800 dark:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+        dark:bg-orange-500 dark:text-white dark:hover:bg-orange-500 dark:hover:text-white cursor-pointer"
             >
               <MdOutlineKeyboardArrowRight size={20} className="md:text-2xl" />
             </button>
@@ -72,6 +74,9 @@ const Home = () => {
                 slidesPerView={1}
                 centeredSlides={true}
                 loop={true}
+                watchSlidesProgress={true}
+                observer={true}
+                observeParents={true}
                 autoplay={{
                   delay: 2500,
                   disableOnInteraction: false,
@@ -103,7 +108,12 @@ const Home = () => {
       <DataScienceProcess />
       <CaseStudySlider />
       <Team limit={4} showHeader={true} />
-      <Testimonials />
+      <Testimonials
+        title="What Our Students Are Saying?"
+        subtitle="Hear from our internship students who gained real-world
+              experience and improved their development skills through live
+              projects and mentorship."
+      />
       {/* <Blog /> */}
       <CTA />
     </>

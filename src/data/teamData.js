@@ -1,7 +1,7 @@
-import team1 from "./../assets/images/teamMember-1.jpg";
-import team2 from "./../assets/images/team2.png";
-import team3 from "./../assets/images/teamMember-3.jpg";
-import team4 from "./../assets/images/team4.png";
+import team1 from "./../assets/images/teamMember-1.webp";
+import team2 from "./../assets/images/team2.webp";
+import team3 from "./../assets/images/teamMember-3.webp";
+import team4 from "./../assets/images/team4.webp";
 
 export const teamData = [
   { id: 1, img: team1, name: "Hardik Daki", role: "Founder & Lead Developer" },
