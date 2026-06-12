@@ -159,7 +159,7 @@ const Team = ({ showHeader = true, limit }) => {
       try {
         setLoading(true);
 
-        const res = await fetch(`${VITE_BASE_URL}/infinity3-team-members/`, {
+        const res = await fetch(`${VITE_BASE_URL}/contact-inquiry-create/`, {
           signal: controller.signal,
         });
 
