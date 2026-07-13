@@ -53,8 +53,7 @@ const Footer = () => {
           </Link>
 
           <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            
           </p>
 
           {/* Social Icons */}

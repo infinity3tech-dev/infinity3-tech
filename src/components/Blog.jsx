@@ -29,8 +29,7 @@ const Blog = () => {
         </h2>
 
         <p className="text-gray-500 dark:text-gray-300 mt-4 max-w-2xl mx-auto transition">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna.
+         
         </p>
 
         {/* BLOG CARDS */}

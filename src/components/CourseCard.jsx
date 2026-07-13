@@ -82,7 +82,7 @@ const CourseCard = ({ course }) => {
             text-sm mt-2 leading-6
           "
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          
         </p>
 
         {/* FOOTER */}

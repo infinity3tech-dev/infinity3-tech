@@ -61,7 +61,7 @@ const OurHistory = () => {
         </h2>
 
         <p className="text-gray-500 dark:text-gray-300 text-sm mt-2 max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          
         </p>
       </div>
 

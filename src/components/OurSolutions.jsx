@@ -29,8 +29,7 @@ const OurSolutions = () => {
         </h2>
 
         <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.
+          
         </p>
 
         {/* Cards */}
